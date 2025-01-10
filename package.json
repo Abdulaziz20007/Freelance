@@ -1,0 +1,12 @@
+{
+  "name": "freelancer",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node --watch app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
