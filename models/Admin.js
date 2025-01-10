@@ -35,3 +35,4 @@ const Admin = sequelize.define(
 );
 
 module.exports = Admin;
+
