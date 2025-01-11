@@ -14,7 +14,7 @@ const Message = sequelize.define(
       allowNull: false,
     },
     project_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BIGINT,
       allowNull: false,
     },
     reply_to: {

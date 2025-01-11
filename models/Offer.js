@@ -23,7 +23,6 @@ const Offer = sequelize.define(
     },
     duration: {
       type: DataTypes.DATE,
-      allowNull: false,
     },
     status: {
       type: DataTypes.ENUM("pending", "accepted", "rejected"),

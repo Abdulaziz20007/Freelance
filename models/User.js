@@ -1,8 +1,8 @@
 const sequelize = require("../config/db");
 const { DataTypes } = require("sequelize");
 
-const Admin = sequelize.define(
-  "admin",
+const User = sequelize.define(
+  "users",
   {
     id: {
       type: DataTypes.INTEGER,
@@ -17,15 +17,23 @@ const Admin = sequelize.define(
     },
     phone: {
       type: DataTypes.STRING(15),
+      unique: true,
+      message: "Telefon raqam avval ro'yxatdan o'tgan",
     },
     email: {
       type: DataTypes.STRING(50),
+      unique: true,
+      message: "Email avval ro'yxatdan o'tgan",
     },
     password: {
       type: DataTypes.STRING(255),
     },
+    bio: {
+      type: DataTypes.STRING(255),
+    },
     is_active: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     refresh_token: {
       type: DataTypes.STRING(255),
@@ -40,4 +48,4 @@ const Admin = sequelize.define(
   }
 );
 
-module.exports = Admin;
+module.exports = User;

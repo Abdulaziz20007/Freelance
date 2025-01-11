@@ -1,0 +1,467 @@
+{
+  "info": {
+    "_postman_id": "1e4ae416-2a81-4e79-92ee-b65d2a4dccf1",
+    "name": "FreelancerHub",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39646185"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Get All Users",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              }
+            ],
+            "url": "http://localhost:3000/api/user"
+          }
+        },
+        {
+          "name": "Get User by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              }
+            ],
+            "url": "http://localhost:3000/api/user/1"
+          }
+        },
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"n.abdulaziz@gmail.com\",\n    \"password\": \"password\",\n    \"name\": \"John\",\n    \"surname\": \"Doe\",\n    \"phone\": \"+1234567890\"\n}"
+            },
+            "url": "http://localhost:3000/api/user"
+          }
+        },
+        {
+          "name": "Update User",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"John\",\n    \"surname\": \"Doe\"\n}"
+            },
+            "url": "http://localhost:3000/api/user/1"
+          }
+        },
+        {
+          "name": "Delete User",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              }
+            ],
+            "url": "http://localhost:3000/api/user/1"
+          }
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"n.abdulaziz@gmail.com\",\n    \"password\": \"password\"\n}"
+            },
+            "url": "http://localhost:3000/api/user/login"
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              }
+            ],
+            "url": "http://localhost:3000/api/user/logout"
+          }
+        },
+        {
+          "name": "Refresh Token",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "http://localhost:3000/api/user/refresh"
+          }
+        },
+        {
+          "name": "Verify User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:3000/api/user/verify/verification-uuid-here"
+          }
+        },
+        {
+          "name": "Change Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"currentPassword\": \"password\",\n    \"newPassword\": \"password\"\n}"
+            },
+            "url": "http://localhost:3000/api/user/changepassword/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Freelancers",
+      "item": [
+        {
+          "name": "Get All Freelancers",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              }
+            ],
+            "url": "http://localhost:3000/api/freelancer"
+          }
+        },
+        {
+          "name": "Get Freelancer by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              }
+            ],
+            "url": "http://localhost:3000/api/freelancer/1"
+          }
+        },
+        {
+          "name": "Create Freelancer",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"n.abdulaziz@gmail.com\",\n    \"password\": \"password\",\n    \"name\": \"John\",\n    \"surname\": \"Doe\",\n    \"phone\": \"+1234567890\",\n    \"bio\": \"Experienced web developer\",\n    \"portfolio_url\": \"https://portfolio.example.com\",\n    \"availability\": true\n}"
+            },
+            "url": "http://localhost:3000/api/freelancer"
+          }
+        },
+        {
+          "name": "Update Freelancer",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"John\",\n    \"surname\": \"Doe\",\n    \"email\": \"n.abdulaziz@gmail.com\",\n    \"phone\": \"+1234567890\",\n    \"password\": \"password\",\n    \"bio\": \"Updated bio\",\n    \"portfolio_url\": \"https://updated-portfolio.example.com\",\n    \"availability\": false\n}"
+            },
+            "url": "http://localhost:3000/api/freelancer/1"
+          }
+        },
+        {
+          "name": "Delete Freelancer",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              }
+            ],
+            "url": "http://localhost:3000/api/freelancer/1"
+          }
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"n.abdulaziz@gmail.com\",\n    \"password\": \"password\"\n}"
+            },
+            "url": "http://localhost:3000/api/freelancer/login"
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              }
+            ],
+            "url": "http://localhost:3000/api/freelancer/logout"
+          }
+        },
+        {
+          "name": "Refresh Token",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "http://localhost:3000/api/freelancer/refresh"
+          }
+        },
+        {
+          "name": "Verify Freelancer",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:3000/api/freelancer/verify/verification-uuid-here"
+          }
+        },
+        {
+          "name": "Change Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"currentPassword\": \"password\",\n    \"newPassword\": \"password\"\n}"
+            },
+            "url": "http://localhost:3000/api/freelancer/changepassword/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admins",
+      "item": [
+        {
+          "name": "Get All Admins",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              }
+            ],
+            "url": "http://localhost:3000/api/admin"
+          }
+        },
+        {
+          "name": "Get Admin by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              }
+            ],
+            "url": "http://localhost:3000/api/admin/1"
+          }
+        },
+        {
+          "name": "Create Admin",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"n.abdulaziz@gmail.com\",\n    \"password\": \"password\",\n    \"name\": \"John\",\n    \"surname\": \"Doe\",\n    \"phone\": \"+1234567890\"\n}"
+            },
+            "url": "http://localhost:3000/api/admin"
+          }
+        },
+        {
+          "name": "Update Admin",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"John\",\n    \"surname\": \"Doe\"\n}"
+            },
+            "url": "http://localhost:3000/api/admin/1"
+          }
+        },
+        {
+          "name": "Delete Admin",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              }
+            ],
+            "url": "http://localhost:3000/api/admin/1"
+          }
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"n.abdulaziz@gmail.com\",\n    \"password\": \"password\"\n}"
+            },
+            "url": "http://localhost:3000/api/admin/login"
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              }
+            ],
+            "url": "http://localhost:3000/api/admin/logout"
+          }
+        },
+        {
+          "name": "Refresh Token",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "http://localhost:3000/api/admin/refresh"
+          }
+        },
+        {
+          "name": "Change Password",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"currentPassword\": \"password\",\n    \"newPassword\": \"password\"\n}"
+            },
+            "url": "http://localhost:3000/api/admin/changepassword/1"
+          }
+        }
+      ]
+    }
+  ]
+}

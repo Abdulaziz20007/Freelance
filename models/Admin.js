@@ -17,9 +17,13 @@ const Admin = sequelize.define(
     },
     phone: {
       type: DataTypes.STRING(15),
+      unique: true,
+      message: "Telefon raqam avval ro'yxatdan o'tgan",
     },
     email: {
       type: DataTypes.STRING(50),
+      unique: true,
+      message: "Email avval ro'yxatdan o'tgan",
     },
     password: {
       type: DataTypes.STRING(255),

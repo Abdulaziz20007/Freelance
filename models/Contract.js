@@ -9,12 +9,36 @@ const Contract = sequelize.define(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.VARCHAR,
+    project_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
-    parent_category_id: {
-      type: DataTypes.BIGINT,
+    freelancer_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    amount: {
+      type: DataTypes.DECIMAL,
+      allowNull: false,
+    },
+    start_date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
+    end_date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
+    status: {
+      type: DataTypes.ENUM("active", "completed"),
+      defaultValue: "active",
+    },
+    created_at: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW,
+    },
+    review: {
+      type: DataTypes.INTEGER,
       allowNull: true,
     },
   },

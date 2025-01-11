@@ -17,9 +17,13 @@ const Freelancer = sequelize.define(
     },
     phone: {
       type: DataTypes.STRING(15),
+      unique: true,
+      message: "Telefon raqam avval ro'yxatdan o'tgan",
     },
     email: {
       type: DataTypes.STRING(50),
+      unique: true,
+      message: "Email avval ro'yxatdan o'tgan",
     },
     password: {
       type: DataTypes.STRING(255),
@@ -38,12 +42,21 @@ const Freelancer = sequelize.define(
     },
     is_active: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     refresh_token: {
       type: DataTypes.STRING(255),
     },
     verification: {
       type: DataTypes.STRING(255),
+    },
+    created_at: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW,
+    },
+    updated_at: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW,
     },
   },
   {
